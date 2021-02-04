@@ -11,6 +11,13 @@ client.on("ready", () => { // Logs response when started
 });
 client.on('message', (message) => {
     if (message.author.bot) return;
+    let args = message.content.split(" ")
+    if (message.content.startsWith = '&count') {
+        lastnumber = parseInt(args[1])
+        message.react('✅')
+        message.delete({timeout: 2000})
+        return;
+    }
     if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd')
     if (message.channel.id != channelIDconfig) return; 
     //code to execute in-channel
