@@ -39,7 +39,7 @@ client.on('message', (message) => {
 client.on('ready', () => {
     setInterval(() => {
         client.user.setActivity('Currently at '+lastnumber, { type: 'PLAYING' }); // sets to one of any in array
-    }, 2000); // Runs this every 7 seconds.
+    }, 1000); // Runs this every 7 seconds.
     
 });
 
