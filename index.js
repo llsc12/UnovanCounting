@@ -1,4 +1,3 @@
-const discord = require('discord.js');
 const Discord = require("discord.js"), fs = require("fs"), config = require("./config.json"); // Get all the requirements
 const { bot_token, config_owner, prefix, hd, hj, ServerID, channelIDconfig} = require('./config.json')  // Get the config.json file into the main file
 const client = new Discord.Client({ messageSweepInterval: 60, disableEveryone: true }) // Create a client
@@ -11,6 +10,9 @@ client.on("ready", () => { // Logs response when started
 });
 client.on('message', (message) => {
     if (message.author.bot) return;
+    if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd')
+    if (message.channel.id != channelIDconfig) return; 
+    //code to execute in-channel
     let args = message.content.split(" ")
     if (message.content.startsWith = '&count') {
         lastnumber = parseInt(args[1])
@@ -18,9 +20,6 @@ client.on('message', (message) => {
         message.delete({timeout: 2000})
         return;
     }
-    if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd')
-    if (message.channel.id != channelIDconfig) return; 
-    //code to execute in-channel
     if (parseInt(message.content) == (lastnumber+1)) {
         if (message.author.tag == usernamelast) {
             message.react('❌')
