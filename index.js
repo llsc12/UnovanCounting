@@ -10,7 +10,6 @@ client.on("ready", async () => { // Logs response when started
 });
 client.on('message', async (message) => {
     if (message.author.bot) return;
-    if (message.content.length > 1) return;
     if (message.channel.id = channelIDconfig) {
         //code to execute in-channel
         if (parseInt(message.content) == (lastnumber+1)) {
