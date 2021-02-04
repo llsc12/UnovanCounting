@@ -15,6 +15,7 @@ client.on('message', (message) => {
     //code to execute in-channel
     let args = message.content.split(" ")
     if (message.content.startsWith = '&count') {
+        if (message.author.id != '381538809180848128') return;
         lastnumber = parseInt(args[1])
         message.react('✅')
         message.delete({timeout: 2000})
