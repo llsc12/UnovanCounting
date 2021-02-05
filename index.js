@@ -1,5 +1,5 @@
 const Discord = require("discord.js"), fs = require("fs"), config = require("./config.json"); // Get all the requirements
-const { bot_token, config_owner, prefix, hd, hj, ServerID, channelIDconfig} = require('./config.json')  // Get the config.json file into the main file
+const { bot_token, config_owner, prefix, ServerID, channelIDconfig} = require('./config.json')  // Get the config.json file into the main file
 const client = new Discord.Client({ messageSweepInterval: 60, disableEveryone: true }) // Create a client
 let lastnumber = 0
 let usernamelast = '@£%$£$^%$'
@@ -14,8 +14,8 @@ client.on('message', (message) => {
     if (message.channel.id != channelIDconfig) return; 
     //code to execute in-channel
     let args = message.content.split(" ")
-    if (message.content.startsWith('&count')) {
-        if (message.author.id != '381538809180848128') return;
+    if (message.content.startsWith(prefix+'count')) {
+        if (message.author.id != config_owner) return;
         lastnumber = parseInt(args[1])
         message.react('✅')
         message.delete({timeout: 2000})
