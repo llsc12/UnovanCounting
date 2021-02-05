@@ -9,6 +9,7 @@ client.on("ready", () => { // Logs response when started
     client.user.setPresence({status: "dnd"})
 });
 client.on('message', (message) => {
+    if (message.content.includes('0') || message.content.includes('1') || message.content.includes('2') || message.content.includes('3') || message.content.includes('4') || message.content.includes('5') || message.content.includes('6') || message.content.includes('7') || message.content.includes('') || message.content.includes('9'))
     if (message.author.bot) return;
     if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd')
     if (message.channel.id != channelIDconfig) return; 
