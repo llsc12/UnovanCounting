@@ -14,14 +14,13 @@ client.on('message', (message) => {
     if (message.channel.id != channelIDconfig) return; 
     //code to execute in-channel
     let args = message.content.split(" ")
-    if (message.content.startsWith = '&count') {
+    if (message.content.startsWith('&count')) {
         if (message.author.id != '381538809180848128') return;
         lastnumber = parseInt(args[1])
         message.react('✅')
         message.delete({timeout: 2000})
         return;
-    }
-    if (parseInt(message.content) == (lastnumber+1)) {
+    } else if (parseInt(message.content) == (lastnumber+1)) {
         if (message.author.tag == usernamelast) {
             message.react('❌')
             message.channel.send('bruh, no double counting. anyways, starting at 0')
