@@ -19,7 +19,7 @@ client.on('message', (message) => {
         lastnumber = parseInt(args[1])
         message.react('✅')
         message.delete({timeout: 2000})
-        return;
+        return; //made by llsc12
     } else if (parseInt(message.content) == (lastnumber+1)) {
         if (message.author.tag == usernamelast) {
             message.react('❌')
