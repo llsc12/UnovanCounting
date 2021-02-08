@@ -12,7 +12,8 @@ client.on("ready", () => { // Logs response when started
 });
 
 client.on('message', (message) => {
-    if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd. also we at '+lastnumber+'.')
+    let countchannel = client.channels.cache.get(channelIDconfig)
+    if (message.content.includes('<@!'+client.user.id+'>')) return message.channel.send('don\'t ping me again, i\'m on dnd. also we at '+lastnumber+'.')
     if (message.content.startsWith(prefix+'count')) {
         let args = message.content.split(" ")
         if (message.author.id != config_owner) return;
