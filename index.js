@@ -10,7 +10,7 @@ client.on("ready", () => { // Logs response when started
 });
 client.on('message', (message) => {
     if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd. also we at '+lastnumber+'.')
-    if (message.content.includes('0')) {
+    if (message.content.startsWith('0')) {
     if (message.author.bot) return;
     if (message.channel.id != channelIDconfig) return; 
     //code to execute in-channel
@@ -41,7 +41,7 @@ client.on('message', (message) => {
     }
     //end
     }
-    else if (message.content.includes('1')) {
+    else if (message.content.startsWith('1')) {
         if (message.author.bot) return;
         if (message.channel.id != channelIDconfig) return; 
         //code to execute in-channel
@@ -72,7 +72,7 @@ client.on('message', (message) => {
         }
         //end
         }
-        else if (message.content.includes('2')) {
+        else if (message.content.startsWith('2')) {
             if (message.author.bot) return;
             if (message.channel.id != channelIDconfig) return; 
             //code to execute in-channel
@@ -103,9 +103,9 @@ client.on('message', (message) => {
             }
             //end
             }
-            else if (message.content.includes('3')) {
+            else if (message.content.startsWith('3')) {
                 if (message.author.bot) return;
-                if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd')
+                if (message.content.startsWith('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd')
                 if (message.channel.id != channelIDconfig) return; 
                 //code to execute in-channel
                 let args = message.content.split(" ")
@@ -135,7 +135,7 @@ client.on('message', (message) => {
                 }
                 //end
                 }
-                else if (message.content.includes('4')) {
+                else if (message.content.startsWith('4')) {
                     if (message.author.bot) return;
                     if (message.channel.id != channelIDconfig) return; 
                     //code to execute in-channel
@@ -166,7 +166,7 @@ client.on('message', (message) => {
                     }
                     //end
                     }
-                    else if (message.content.includes('5')) {
+                    else if (message.content.startsWith('5')) {
                         if (message.author.bot) return;
                         if (message.channel.id != channelIDconfig) return; 
                         //code to execute in-channel
@@ -197,7 +197,7 @@ client.on('message', (message) => {
                         }
                         //end
                         }
-                        else if (message.content.includes('6')) {
+                        else if (message.content.startsWith('6')) {
                             if (message.author.bot) return;
                             if (message.channel.id != channelIDconfig) return; 
                             //code to execute in-channel
@@ -228,7 +228,7 @@ client.on('message', (message) => {
                             }
                             //end
                             }
-                            else if (message.content.includes('7')) {
+                            else if (message.content.startsWith('7')) {
                                 if (message.author.bot) return;
                                 if (message.channel.id != channelIDconfig) return; 
                                 //code to execute in-channel
@@ -259,7 +259,7 @@ client.on('message', (message) => {
                                 }
                                 //end
                                 }
-                                else if (message.content.includes('8')) {
+                                else if (message.content.startsWith('8')) {
                                     if (message.author.bot) return;
                                     if (message.channel.id != channelIDconfig) return; 
                                     //code to execute in-channel
@@ -290,7 +290,7 @@ client.on('message', (message) => {
                                     }
                                     //end
                                     }
-                                    else if (message.content.includes('9')) {
+                                    else if (message.content.startsWith('9')) {
                                         if (message.author.bot) return;
                                         if (message.channel.id != channelIDconfig) return; 
                                         //code to execute in-channel
