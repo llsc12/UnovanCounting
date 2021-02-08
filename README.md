@@ -5,7 +5,7 @@ Contents below.
 
 {
     "bot_token": "Bot token here :D",
-    "config_owner": "your userID, but this isnt used in this code",
+    "config_owner": "your userID",
     "prefix": "&",
     "ServerID": "Replace with your server id",
     "channelIDconfig": "Replace with the counting channel id"
