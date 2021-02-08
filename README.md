@@ -1,6 +1,6 @@
 # UnovanCounting
 Add a config file to actually run the bot, k? here's a template. 
-filename: config.json
+filename: 'config.json'
 Contents below.
 
 {
