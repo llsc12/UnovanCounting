@@ -18,7 +18,7 @@ client.on('message', (message) => {
         if (message.author.id != config_owner) return;
         lastnumber = parseInt(args[1])
         message.react('✅')
-        message.channel.setTopic('Current number: '+lastnumber)
+        countchannel.setTopic('Current number: '+lastnumber)
         message.delete({timeout: 2000})
         return; //made by llsc12
     }
@@ -38,7 +38,7 @@ client.on('message', (message) => {
         message.react('✅')
         lastnumber = (parseInt(message.content))
         usernamelast = message.author.tag
-        message.channel.setTopic('Current number: '+lastnumber)
+        countchannel.setTopic('Current number: '+lastnumber)
         }
     } else {
         message.react('❌')
@@ -64,7 +64,7 @@ client.on('message', (message) => {
             message.react('✅')
             lastnumber = (parseInt(message.content))
             usernamelast = message.author.tag
-            message.channel.setTopic('Current number: '+lastnumber)
+            countchannel.setTopic('Current number: '+lastnumber)
             }
         } else {
             message.react('❌')
@@ -90,7 +90,7 @@ client.on('message', (message) => {
                 message.react('✅')
                 lastnumber = (parseInt(message.content))
                 usernamelast = message.author.tag
-                message.channel.setTopic('Current number: '+lastnumber)
+                countchannel.setTopic('Current number: '+lastnumber)
                 }
             } else {
                 message.react('❌')
@@ -117,7 +117,7 @@ client.on('message', (message) => {
                     message.react('✅')
                     lastnumber = (parseInt(message.content))
                     usernamelast = message.author.tag
-                    message.channel.setTopic('Current number: '+lastnumber)
+                    countchannel.setTopic('Current number: '+lastnumber)
                     }
                 } else {
                     message.react('❌')
@@ -143,7 +143,7 @@ client.on('message', (message) => {
                         message.react('✅')
                         lastnumber = (parseInt(message.content))
                         usernamelast = message.author.tag
-                        message.channel.setTopic('Current number: '+lastnumber)
+                        countchannel.setTopic('Current number: '+lastnumber)
                         }
                     } else {
                         message.react('❌')
@@ -169,7 +169,7 @@ client.on('message', (message) => {
                             message.react('✅')
                             lastnumber = (parseInt(message.content))
                             usernamelast = message.author.tag
-                            message.channel.setTopic('Current number: '+lastnumber)
+                            countchannel.setTopic('Current number: '+lastnumber)
                             }
                         } else {
                             message.react('❌')
@@ -195,7 +195,7 @@ client.on('message', (message) => {
                                 message.react('✅')
                                 lastnumber = (parseInt(message.content))
                                 usernamelast = message.author.tag
-                                message.channel.setTopic('Current number: '+lastnumber)
+                                countchannel.setTopic('Current number: '+lastnumber)
                                 }
                             } else {
                                 message.react('❌')
@@ -221,7 +221,7 @@ client.on('message', (message) => {
                                     message.react('✅')
                                     lastnumber = (parseInt(message.content))
                                     usernamelast = message.author.tag
-                                    message.channel.setTopic('Current number: '+lastnumber)
+                                    countchannel.setTopic('Current number: '+lastnumber)
                                     }
                                 } else {
                                     message.react('❌')
@@ -247,7 +247,7 @@ client.on('message', (message) => {
                                         message.react('✅')
                                         lastnumber = (parseInt(message.content))
                                         usernamelast = message.author.tag
-                                        message.channel.setTopic('Current number: '+lastnumber)
+                                        countchannel.setTopic('Current number: '+lastnumber)
                                         }
                                     } else {
                                         message.react('❌')
@@ -273,7 +273,7 @@ client.on('message', (message) => {
                                             message.react('✅')
                                             lastnumber = (parseInt(message.content))
                                             usernamelast = message.author.tag
-                                            message.channel.setTopic('Current number: '+lastnumber)
+                                            countchannel.setTopic('Current number: '+lastnumber)
                                             }
                                         } else {
                                             message.react('❌')
