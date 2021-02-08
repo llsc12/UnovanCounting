@@ -7,20 +7,24 @@ let usernamelast = '@£%$£$^%$'
 client.on("ready", () => { // Logs response when started
     console.log('ready to count!')
     client.user.setPresence({status: "dnd"})
+    let countchannel = client.channels.cache.get(channelIDconfig)
+    countchannel.setTopic('Current number: '+lastnumber)
 });
+
 client.on('message', (message) => {
     if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd. also we at '+lastnumber+'.')
-    if (message.content.startsWith('0')) {
-    if (message.author.bot) return;
-    if (message.channel.id != channelIDconfig) return;
     if (message.content.startsWith(prefix+'count')) {
         let args = message.content.split(" ")
         if (message.author.id != config_owner) return;
         lastnumber = parseInt(args[1])
         message.react('✅')
+        message.channel.setTopic('Current number: '+lastnumber)
         message.delete({timeout: 2000})
         return; //made by llsc12
     }
+    if (message.content.startsWith('0')) {
+    if (message.author.bot) return;
+    if (message.channel.id != channelIDconfig) return;
     //code to execute in-channel
     let args = message.content.split(" ")
     if (parseInt(message.content) == (lastnumber+1)) {
@@ -34,6 +38,7 @@ client.on('message', (message) => {
         message.react('✅')
         lastnumber = (parseInt(message.content))
         usernamelast = message.author.tag
+        message.channel.setTopic('Current number: '+lastnumber)
         }
     } else {
         message.react('❌')
@@ -59,6 +64,7 @@ client.on('message', (message) => {
             message.react('✅')
             lastnumber = (parseInt(message.content))
             usernamelast = message.author.tag
+            message.channel.setTopic('Current number: '+lastnumber)
             }
         } else {
             message.react('❌')
@@ -84,6 +90,7 @@ client.on('message', (message) => {
                 message.react('✅')
                 lastnumber = (parseInt(message.content))
                 usernamelast = message.author.tag
+                message.channel.setTopic('Current number: '+lastnumber)
                 }
             } else {
                 message.react('❌')
@@ -110,6 +117,7 @@ client.on('message', (message) => {
                     message.react('✅')
                     lastnumber = (parseInt(message.content))
                     usernamelast = message.author.tag
+                    message.channel.setTopic('Current number: '+lastnumber)
                     }
                 } else {
                     message.react('❌')
@@ -135,6 +143,7 @@ client.on('message', (message) => {
                         message.react('✅')
                         lastnumber = (parseInt(message.content))
                         usernamelast = message.author.tag
+                        message.channel.setTopic('Current number: '+lastnumber)
                         }
                     } else {
                         message.react('❌')
@@ -160,6 +169,7 @@ client.on('message', (message) => {
                             message.react('✅')
                             lastnumber = (parseInt(message.content))
                             usernamelast = message.author.tag
+                            message.channel.setTopic('Current number: '+lastnumber)
                             }
                         } else {
                             message.react('❌')
@@ -185,6 +195,7 @@ client.on('message', (message) => {
                                 message.react('✅')
                                 lastnumber = (parseInt(message.content))
                                 usernamelast = message.author.tag
+                                message.channel.setTopic('Current number: '+lastnumber)
                                 }
                             } else {
                                 message.react('❌')
@@ -210,6 +221,7 @@ client.on('message', (message) => {
                                     message.react('✅')
                                     lastnumber = (parseInt(message.content))
                                     usernamelast = message.author.tag
+                                    message.channel.setTopic('Current number: '+lastnumber)
                                     }
                                 } else {
                                     message.react('❌')
@@ -235,6 +247,7 @@ client.on('message', (message) => {
                                         message.react('✅')
                                         lastnumber = (parseInt(message.content))
                                         usernamelast = message.author.tag
+                                        message.channel.setTopic('Current number: '+lastnumber)
                                         }
                                     } else {
                                         message.react('❌')
@@ -260,6 +273,7 @@ client.on('message', (message) => {
                                             message.react('✅')
                                             lastnumber = (parseInt(message.content))
                                             usernamelast = message.author.tag
+                                            message.channel.setTopic('Current number: '+lastnumber)
                                             }
                                         } else {
                                             message.react('❌')
