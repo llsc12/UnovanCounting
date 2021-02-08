@@ -12,16 +12,18 @@ client.on('message', (message) => {
     if (message.content.includes('<@!806912330088054857>')) return message.channel.send('don\'t ping me again, i\'m on dnd. also we at '+lastnumber+'.')
     if (message.content.startsWith('0')) {
     if (message.author.bot) return;
-    if (message.channel.id != channelIDconfig) return; 
-    //code to execute in-channel
-    let args = message.content.split(" ")
+    if (message.channel.id != channelIDconfig) return;
     if (message.content.startsWith(prefix+'count')) {
+        let args = message.content.split(" ")
         if (message.author.id != config_owner) return;
         lastnumber = parseInt(args[1])
         message.react('✅')
         message.delete({timeout: 2000})
         return; //made by llsc12
-    } else if (parseInt(message.content) == (lastnumber+1)) {
+    }
+    //code to execute in-channel
+    let args = message.content.split(" ")
+    if (parseInt(message.content) == (lastnumber+1)) {
         if (message.author.tag == usernamelast) {
             message.react('❌')
             message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -46,13 +48,7 @@ client.on('message', (message) => {
         if (message.channel.id != channelIDconfig) return; 
         //code to execute in-channel
         let args = message.content.split(" ")
-        if (message.content.startsWith(prefix+'count')) {
-            if (message.author.id != config_owner) return;
-            lastnumber = parseInt(args[1])
-            message.react('✅')
-            message.delete({timeout: 2000})
-            return; //made by llsc12
-        } else if (parseInt(message.content) == (lastnumber+1)) {
+        if (parseInt(message.content) == (lastnumber+1)) {
             if (message.author.tag == usernamelast) {
                 message.react('❌')
                 message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -77,13 +73,7 @@ client.on('message', (message) => {
             if (message.channel.id != channelIDconfig) return; 
             //code to execute in-channel
             let args = message.content.split(" ")
-            if (message.content.startsWith(prefix+'count')) {
-                if (message.author.id != config_owner) return;
-                lastnumber = parseInt(args[1])
-                message.react('✅')
-                message.delete({timeout: 2000})
-                return; //made by llsc12
-            } else if (parseInt(message.content) == (lastnumber+1)) {
+            if (parseInt(message.content) == (lastnumber+1)) {
                 if (message.author.tag == usernamelast) {
                     message.react('❌')
                     message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -109,13 +99,7 @@ client.on('message', (message) => {
                 if (message.channel.id != channelIDconfig) return; 
                 //code to execute in-channel
                 let args = message.content.split(" ")
-                if (message.content.startsWith(prefix+'count')) {
-                    if (message.author.id != config_owner) return;
-                    lastnumber = parseInt(args[1])
-                    message.react('✅')
-                    message.delete({timeout: 2000})
-                    return; //made by llsc12
-                } else if (parseInt(message.content) == (lastnumber+1)) {
+                if (parseInt(message.content) == (lastnumber+1)) {
                     if (message.author.tag == usernamelast) {
                         message.react('❌')
                         message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -140,13 +124,7 @@ client.on('message', (message) => {
                     if (message.channel.id != channelIDconfig) return; 
                     //code to execute in-channel
                     let args = message.content.split(" ")
-                    if (message.content.startsWith(prefix+'count')) {
-                        if (message.author.id != config_owner) return;
-                        lastnumber = parseInt(args[1])
-                        message.react('✅')
-                        message.delete({timeout: 2000})
-                        return; //made by llsc12
-                    } else if (parseInt(message.content) == (lastnumber+1)) {
+                    if (parseInt(message.content) == (lastnumber+1)) {
                         if (message.author.tag == usernamelast) {
                             message.react('❌')
                             message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -171,13 +149,7 @@ client.on('message', (message) => {
                         if (message.channel.id != channelIDconfig) return; 
                         //code to execute in-channel
                         let args = message.content.split(" ")
-                        if (message.content.startsWith(prefix+'count')) {
-                            if (message.author.id != config_owner) return;
-                            lastnumber = parseInt(args[1])
-                            message.react('✅')
-                            message.delete({timeout: 2000})
-                            return; //made by llsc12
-                        } else if (parseInt(message.content) == (lastnumber+1)) {
+                        if (parseInt(message.content) == (lastnumber+1)) {
                             if (message.author.tag == usernamelast) {
                                 message.react('❌')
                                 message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -202,13 +174,7 @@ client.on('message', (message) => {
                             if (message.channel.id != channelIDconfig) return; 
                             //code to execute in-channel
                             let args = message.content.split(" ")
-                            if (message.content.startsWith(prefix+'count')) {
-                                if (message.author.id != config_owner) return;
-                                lastnumber = parseInt(args[1])
-                                message.react('✅')
-                                message.delete({timeout: 2000})
-                                return; //made by llsc12
-                            } else if (parseInt(message.content) == (lastnumber+1)) {
+                            if (parseInt(message.content) == (lastnumber+1)) {
                                 if (message.author.tag == usernamelast) {
                                     message.react('❌')
                                     message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -233,13 +199,7 @@ client.on('message', (message) => {
                                 if (message.channel.id != channelIDconfig) return; 
                                 //code to execute in-channel
                                 let args = message.content.split(" ")
-                                if (message.content.startsWith(prefix+'count')) {
-                                    if (message.author.id != config_owner) return;
-                                    lastnumber = parseInt(args[1])
-                                    message.react('✅')
-                                    message.delete({timeout: 2000})
-                                    return; //made by llsc12
-                                } else if (parseInt(message.content) == (lastnumber+1)) {
+                                if (parseInt(message.content) == (lastnumber+1)) {
                                     if (message.author.tag == usernamelast) {
                                         message.react('❌')
                                         message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -264,13 +224,7 @@ client.on('message', (message) => {
                                     if (message.channel.id != channelIDconfig) return; 
                                     //code to execute in-channel
                                     let args = message.content.split(" ")
-                                    if (message.content.startsWith(prefix+'count')) {
-                                        if (message.author.id != config_owner) return;
-                                        lastnumber = parseInt(args[1])
-                                        message.react('✅')
-                                        message.delete({timeout: 2000})
-                                        return; //made by llsc12
-                                    } else if (parseInt(message.content) == (lastnumber+1)) {
+                                    if (parseInt(message.content) == (lastnumber+1)) {
                                         if (message.author.tag == usernamelast) {
                                             message.react('❌')
                                             message.channel.send('bruh, no double counting. anyways, starting at 0')
@@ -295,13 +249,7 @@ client.on('message', (message) => {
                                         if (message.channel.id != channelIDconfig) return; 
                                         //code to execute in-channel
                                         let args = message.content.split(" ")
-                                        if (message.content.startsWith(prefix+'count')) {
-                                            if (message.author.id != config_owner) return;
-                                            lastnumber = parseInt(args[1])
-                                            message.react('✅')
-                                            message.delete({timeout: 2000})
-                                            return; //made by llsc12
-                                        } else if (parseInt(message.content) == (lastnumber+1)) {
+                                        if (parseInt(message.content) == (lastnumber+1)) {
                                             if (message.author.tag == usernamelast) {
                                                 message.react('❌')
                                                 message.channel.send('bruh, no double counting. anyways, starting at 0')
