@@ -293,4 +293,12 @@ client.on('ready', () => {
     
 });
 
+client.on('ready', () => {
+  PingServer()
+});
+
+function PingServer() { // Ping server every 10 seconds
+  setInterval(function(){ client.guilds.cache.get('758016990567858187').channels.cache.get('816404028070035467').send('PING'); }, 10000);
+}
+
 client.login(bot_token)
