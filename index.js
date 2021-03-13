@@ -1,5 +1,5 @@
 const Discord = require("discord.js"), fs = require("fs"), si = require('systeminformation'); // Get all the requirements
-const { bot_token, config_owner, prefix, ServerID, channelIDconfig} = require('./config.json')  // Get the config.json file into the main file
+const { bot_token, config_owner, prefix, channelIDconfig} = require('./config.json')  // Get the config.json file into the main file
 const client = new Discord.Client({ messageSweepInterval: 60, disableEveryone: true }) // Create a client
 let lastnumber = 0
 let usernamelast = '@£%$£$^%$'
@@ -11,7 +11,6 @@ client.on("ready", () => { // Logs response when started
     countchannel.setTopic('Current number: '+lastnumber)
 });
 
-const si = require('systeminformation');
 client.on('message', (message) => {
     if (!message.guild || message.author.bot) return;
     if (message.content.startsWith(prefix)) {
